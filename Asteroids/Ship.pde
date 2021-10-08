@@ -28,8 +28,12 @@ class Ship extends GameObject{
    
    shotTimer++;
    
-   if(upkey)
+   if(upkey){
    velocity.add(direction);
+   object.add(new GNParticles());
+   object.add(new GNParticles());
+   object.add(new GNParticles());
+   }
    if(downkey)
    velocity.sub(direction);
    if(leftkey)

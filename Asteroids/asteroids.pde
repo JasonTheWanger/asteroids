@@ -2,7 +2,8 @@ boolean upkey, downkey, leftkey, rightkey, spacekey;
 Ship ship;
 ArrayList<GameObject> object;
 void setup(){
- size(800,600);
+ size(800,800, FX2D);
+ rectMode(CENTER);
  imageMode(CENTER);
  ship= new Ship();
  object = new ArrayList<GameObject>();
