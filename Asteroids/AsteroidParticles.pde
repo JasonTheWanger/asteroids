@@ -1,28 +1,24 @@
-class GNParticles extends GameObject{
+class AsteroidParticles extends Asteroid{
   int t;
   PVector nudge;
-  GNParticles(){
-    lives =1;
+  PVector location, velocity, direction;
+  AsteroidParticles(int s, float x, float y){
+   lives =1;
     size=int(random(5,12));
     t=int(random(200,255));
-    location = ship.location.copy();
+    location = new PVector(x,y);
     nudge = ship.direction.copy();
     nudge.rotate(PI);
     nudge.setMag(30);
     location.add(nudge);
     velocity = ship.direction.copy();
-    velocity.rotate(PI+random(-0.5,0.5));
+    velocity.rotate(PI+random(-3.14,3.14));
     velocity.setMag(3);
   }
   void show(){
-    noStroke();
-    fill(#33F0A9,t);
-  square(location.x, location.y, size);
-}
+    //square(location
+  }
   void act(){
-    super.act();
-    t-=10;
-    if(t<=0) 
-    lives = 0;
+    
   }
 }

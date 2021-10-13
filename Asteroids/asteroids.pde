@@ -11,6 +11,8 @@ void setup(){
  object.add(new Asteroid());
  object.add(new Asteroid());
  object.add(new Asteroid());
+ object.add(new Asteroid());
+ object.add(new Asteroid());
 }
 
 void draw(){

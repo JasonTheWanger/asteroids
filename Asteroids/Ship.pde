@@ -18,7 +18,7 @@ class Ship extends GameObject{
    translate(location.x, location.y);
    rotate(direction.heading());
    noFill();
-   stroke(255);
+   stroke(#ED4D98);
    triangle(-25,-12.5,-25,12.5,25,0);
    
    popMatrix();
@@ -33,16 +33,21 @@ class Ship extends GameObject{
    object.add(new GNParticles());
    object.add(new GNParticles());
    object.add(new GNParticles());
+   object.add(new Phaseshift());
    }
    if(downkey)
    velocity.sub(direction);
    if(leftkey)
-   direction.rotate(-radians(5));
+   direction.rotate(radians(-5));
+   //velocity.rotate(radians(-5));
    if(rightkey)
    direction.rotate(radians(5));
+   //velocity.rotate(radians(5));
    if(spacekey && shotTimer>threshold){
    object.add(new Bullet());
    shotTimer=0;
    }
+   if(velocity.mag()>5)
+   velocity.setMag(5);
  }
 }
