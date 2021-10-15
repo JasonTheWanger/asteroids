@@ -34,6 +34,10 @@ class Asteroid extends GameObject{
          object.add(new Asteroid(size/2, location.x, location.y));
          object.add(new Asteroid(size/2, location.x, location.y));
          }
+         else{
+           for(int c=0; c<30; c++)
+          object.add(new AsteroidParticles(location.x, location.y)); 
+         }
        }
      }
     }
