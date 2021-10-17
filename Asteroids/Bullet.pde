@@ -2,7 +2,7 @@ class Bullet extends GameObject{
   
   int timer;
  Bullet(){
-   timer =70;
+   timer =120;
    lives =1;
    location=new PVector(ship.location.x, ship.location.y);
    velocity=new PVector(ship.direction.x, ship.direction.y);

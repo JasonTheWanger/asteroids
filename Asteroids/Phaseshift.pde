@@ -1,5 +1,6 @@
-class Phaseshift extends Ship{
+class Phaseshift extends GameObject{
   int t;
+  PVector direction;
   Phaseshift(){
   location=ship.location.copy();  
   direction=ship.direction.copy();
