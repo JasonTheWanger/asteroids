@@ -69,6 +69,7 @@ class Ship extends GameObject {
       stroke(255);
     }
     //end of w Ability
+    //r (teleport) ability
     if (rkey&&rcd==false) {
       while (true) {
         teleport=true;
@@ -93,6 +94,7 @@ class Ship extends GameObject {
         rcdAngle=0;
       }
     }
+    //end of r ability
     triangle(-25, -12.5, -25, 12.5, 25, 0);
 
     popMatrix();
