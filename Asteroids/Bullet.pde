@@ -1,8 +1,7 @@
 class Bullet extends GameObject{
   
-  int timer;
+
  Bullet(){
-   timer =120;
    lives =1;
    location=new PVector(ship.location.x, ship.location.y);
    velocity=new PVector(ship.direction.x, ship.direction.y);
@@ -19,9 +18,8 @@ class Bullet extends GameObject{
  void act(){
    super.act();
    
-   timer--;
    
-   if(timer<=0){
+   if(location.x+size>=width||location.y+size>=height){
     lives =0; 
    }
  }

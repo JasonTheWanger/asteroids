@@ -21,6 +21,7 @@ ArrayList<GameObject> object;
 PImage []gif;
 int f;
 PFont font;
+PImage destiny2win, destiny2lost;
 void setup() {
   fullScreen(FX2D);
   rectMode(CENTER);
@@ -46,11 +47,13 @@ void setup() {
   bool=true;
   numAster=0;
   gif = new PImage[150];
-  for (int i=0; i<150; i++) {
+  for (int i=0; i<50; i++) {
     gif[i]=loadImage("frame_"+i+"_delay-0.06s.png");
   }
   font=createFont("8-bit-hud.ttf", 128);
   textFont(font);
+  destiny2win=loadImage("destiny2win.png");
+  destiny2lost=loadImage("destiny2lost.jpg");
   mode=intro;
 }
 

@@ -1,7 +1,6 @@
 class UFOBullet extends GameObject {
-  int timer;
+  
   UFOBullet() {
-    timer =100;
     lives =1;
     location=ufo.location.copy();
     velocity=new PVector(ship.velocity.x+(ship.location.x-location.x), ship.velocity.y+(ship.location.y-location.y));
@@ -17,9 +16,8 @@ class UFOBullet extends GameObject {
   void act() {
     super.act();
 
-    timer--;
 
-    if (timer<=0) {
+    if (location.x+size>=width||location.y+size>=height) {
       lives =0;
     }
   }

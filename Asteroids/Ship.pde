@@ -74,7 +74,7 @@ class Ship extends GameObject {
       while (true) {
         teleport=true;
         location.x=random(0, width);
-        location.y=random(0, width);
+        location.y=random(0, height);
         for (int i=0; i<object.size(); i++) {
           GameObject GB = object.get(i);
           if (GB instanceof Asteroid) {

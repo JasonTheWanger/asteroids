@@ -8,19 +8,19 @@ void Gameover() {
     bool=false;
   }
   if (!win) {
-    background(0);
+    image(destiny2lost,width/2,height/2,width,height);
     textAlign(CENTER, CENTER);
     textSize(30);
     fill(255);
-    text("You lost", width/2, height/3);
-    text("Click to restart", width/2, height*2/3);
+    text("You lost", width/2, height*0.775);
+    text("Click to restart", width/2, height*0.82);
   } else if (win) {
-    background(0);
+    image(destiny2win,width/2,height/2);
     textAlign(CENTER, CENTER);
     textSize(30);
     fill(255);
-    text("You win", width/2, height/3);
-    text("Click to restart", width/2, height*2/3);
+    text("You win", width/2, height*0.775);
+    text("Click to restart", width/2, height*0.82);
   }
   rectMode(CENTER);
   imageMode(CENTER);
